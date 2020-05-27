@@ -1,4 +1,7 @@
 # ASP.NET MVC Dashboard - How to specify custom exception text
+<!-- run online -->
+**[[Run Online]](https://codecentral.devexpress.com/267336836/)**
+<!-- run online end -->
 
 The dashboard in this project contains invalid data connection. This example shows how to override the [OnException](https://docs.microsoft.com/en-us/dotnet/api/system.web.mvc.controller.onexception) method in the custom dashboard controller to specify custom text in the exception. The exception occurs when a controller tries to load data.
 
