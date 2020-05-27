@@ -1,3 +1,10 @@
+<!-- default file list -->
+*Files to look at*:
+* [Global.asax.cs](./CS/MvcDashboardCallbackError/Global.asax.cs) (VB: [Global.asax.vb](./VB/MvcDashboardCallbackError/Global.asax.vb))
+* [CustomDashboardController.cs](./CS/MvcDashboardOverrideOnException/Controllers/CustomDashboardController.cs) (VB: [CustomDashboardController.vb](./VB/MvcDashboardOverrideOnException/Controllers/CustomDashboardController.vb))
+* [DashboardConfig.cs](./CS/MvcDashboardOverrideOnException/App_Start/DashboardConfig.cs) (VB: [DashboardConfig.vb](./VB/MvcDashboardOverrideOnException/App_Start/DashboardConfig.vb))
+<!-- default file list end -->
+
 # ASP.NET MVC Dashboard - How to specify custom exception text
 <!-- run online -->
 **[[Run Online]](https://codecentral.devexpress.com/267336836/)**
