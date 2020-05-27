@@ -1,9 +1,7 @@
-using System.Web.Routing;
-using DevExpress.DashboardWeb;
 using DevExpress.DashboardWeb.Mvc;
+using System.Web.Routing;
 
-namespace MvcDashboardOverrideOnException
-{
+namespace MvcDashboardOverrideOnException {
     public class DashboardConfig
     {
         public static void RegisterService(RouteCollection routes)
