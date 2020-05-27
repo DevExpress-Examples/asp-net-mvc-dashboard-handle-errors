@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Dashboard>
+  <Title Text="New Dashboard" />
+  <DataSources>
+    <SqlDataSource Name="sql" ComponentName="sqlDataSource1">
+      <Connection Name="connection" FromAppConfig="true" />
+      <Query Type="SelectQuery" Name="query">
+        <Tables>
+          <Table Name="Products" />
+        </Tables>
+        <Columns>
+          <AllColumns />
+        </Columns>
+      </Query>
+      <ConnectionOptions CloseConnection="true" />
+    </SqlDataSource>
+  </DataSources>
+  <Parameters>
+    <Parameter Name="Parameter1" AllowMultiselect="true">
+      <StaticListLookUpSettings>
+        <Values>
+          <Value>1</Value>
+          <Value>2</Value>
+        </Values>
+      </StaticListLookUpSettings>
+    </Parameter>
+  </Parameters>
+  <Items>
+    <Grid ComponentName="gridDashboardItem1" Name="Grid 1" DataSource="sqlDataSource1" DataMember="query">
+      <DataItems>
+        <Dimension DataMember="ProductName" DefaultId="DataItem1" />
+        <Dimension DataMember="CategoryID" DefaultId="DataItem0" />
+      </DataItems>
+      <GridColumns>
+        <GridDimensionColumn>
+          <Dimension DefaultId="DataItem0" />
+        </GridDimensionColumn>
+        <GridDimensionColumn>
+          <Dimension DefaultId="DataItem1" />
+        </GridDimensionColumn>
+      </GridColumns>
+      <GridOptions />
+    </Grid>
+  </Items>
+  <LayoutTree>
+    <LayoutGroup>
+      <LayoutItem DashboardItem="gridDashboardItem1" />
+    </LayoutGroup>
+  </LayoutTree>
+</Dashboard>

@@ -1,0 +1,1 @@
+﻿<%@ Application Codebehind="Global.asax.vb" Inherits="MvcDashboardOverrideOnException.MvcApplication" Language="vb" %>
