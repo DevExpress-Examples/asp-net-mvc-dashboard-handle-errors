@@ -3,6 +3,7 @@
 * [Global.asax.cs](./CS/MvcDashboardCallbackError/Global.asax.cs) (VB: [Global.asax.vb](./VB/MvcDashboardCallbackError/Global.asax.vb))
 * [CustomDashboardController.cs](./CS/MvcDashboardOverrideOnException/Controllers/CustomDashboardController.cs) (VB: [CustomDashboardController.vb](./VB/MvcDashboardOverrideOnException/Controllers/CustomDashboardController.vb))
 * [DashboardConfig.cs](./CS/MvcDashboardOverrideOnException/App_Start/DashboardConfig.cs) (VB: [DashboardConfig.vb](./VB/MvcDashboardOverrideOnException/App_Start/DashboardConfig.vb))
+* [Index.cshtml](./CS/MvcDashboardOverrideOnException/Views/Default/Index.cshtml) VB: [Index.vbhtml](./VB/MvcDashboardOverrideOnException/Views/Default/Index.vbhtml))
 <!-- default file list end -->
 
 # ASP.NET MVC Dashboard - How to specify custom exception text
@@ -17,7 +18,8 @@ The dashboard in this project contains invalid data connection. This example sho
 Create a custom dashboard controller and override the `OnException` method. The displayed text depends on whether the application is in development mode:
 
 ```cs
-public class CustomDashboardController : DashboardController {
+public class CustomDashboardController : DashboardController
+{
 	protected override void OnException(ExceptionContext context) {
 		var exception = context.Exception;
 		if(exception != null && context.HttpContext != null) {
@@ -37,11 +39,6 @@ public class CustomDashboardController : DashboardController {
 	static string GetJson(string message) {
 		return $"{{ \"Message\":\"{message}\" }}";
 	}
-}
-
-public class CustomException : Exception {
-	public const string SafeMessage = "Safe Message!";
-	public const string UnsafeMessage = "Unsafe Message!";
 }
 ```
 
