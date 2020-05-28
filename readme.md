@@ -10,7 +10,7 @@
 **[[Run Online]](https://codecentral.devexpress.com/267336836/)**
 <!-- run online end -->
 
-The dashboard in this project contains invalid data connection. This example shows how to override the [OnException](https://docs.microsoft.com/en-us/dotnet/api/system.web.mvc.controller.onexception) method in the custom dashboard controller to specify custom text in the exception. The exception occurs when a controller tries to load data.
+The dashboard in this project contains invalid data connection. This example shows how to override the [OnException](https://docs.microsoft.com/en-us/dotnet/api/system.web.mvc.controller.onexception) method in a custom dashboard controller to specify custom text in the exception. The exception occurs when the controller tries to load data.
 
 ![](image/web-exception-on-data-loading.png)
 
