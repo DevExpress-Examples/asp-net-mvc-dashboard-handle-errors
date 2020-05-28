@@ -6,7 +6,7 @@
 * [Index.cshtml](./CS/MvcDashboardOverrideOnException/Views/Default/Index.cshtml) VB: [Index.vbhtml](./VB/MvcDashboardOverrideOnException/Views/Default/Index.vbhtml))
 <!-- default file list end -->
 
-# ASP.NET MVC Dashboard - How to specify custom exception text
+# ASP.NET MVC Dashboard - How to specify custom exception text (OnException)
 <!-- run online -->
 **[[Run Online]](https://codecentral.devexpress.com/267336836/)**
 <!-- run online end -->
