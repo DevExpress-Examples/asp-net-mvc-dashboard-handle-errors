@@ -42,6 +42,21 @@ public class CustomDashboardController : DashboardController
 }
 ```
 
+Specify the created custom controller's name in the view:
+
+```html
+<body>
+    <div style="position:absolute; top: 0; right:0; left:0; bottom: 0">
+        @Html.DevExpress().Dashboard(settings => {
+            settings.ControllerName = "CustomDashboard";
+            settings.Name = "Dashboard";
+            settings.Width = Unit.Percentage(100);
+            settings.Height = Unit.Percentage(100);
+        }).GetHtml()
+    </div>
+</body>
+```
+
 Use the created `CustomDashboard` controller when you map a dashboard route:
 
 ```cs
