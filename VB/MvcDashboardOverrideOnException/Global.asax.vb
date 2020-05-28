@@ -15,14 +15,13 @@ Namespace MvcDashboardOverrideOnException
 			AreaRegistration.RegisterAllAreas()
 			RouteConfig.RegisterRoutes(RouteTable.Routes)
 
-			Dim dashboardStorage As New DashboardFileStorage(Server.MapPath("~/App_Data/Dashboards"))
 			Dim dataSourceStrorage As New DataSourceInMemoryStorage()
 
 			Dim sql As New DashboardSqlDataSource("sql")
 			sql.Queries.Add(SelectQueryFluentBuilder.AddTable("Products").SelectAllColumns().Build("query"))
 			dataSourceStrorage.RegisterDataSource(sql.SaveToXml())
 
-			DashboardConfigurator.Default.SetDashboardStorage(dashboardStorage)
+			DashboardConfigurator.Default.SetDashboardStorage(New DashboardFileStorage(Server.MapPath("~/App_Data/Dashboards")))
 			DashboardConfigurator.Default.SetDataSourceStorage(dataSourceStrorage)
 			AddHandler DashboardConfigurator.Default.ConfigureDataConnection, AddressOf ASPxDashboard1_ConfigureDataConnection
 		End Sub
