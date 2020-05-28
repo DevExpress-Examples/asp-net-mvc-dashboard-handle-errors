@@ -15,14 +15,13 @@ namespace MvcDashboardOverrideOnException {
             AreaRegistration.RegisterAllAreas();
             RouteConfig.RegisterRoutes(RouteTable.Routes);
 
-            DashboardFileStorage dashboardStorage = new DashboardFileStorage(Server.MapPath("~/App_Data/Dashboards"));
             DataSourceInMemoryStorage dataSourceStrorage = new DataSourceInMemoryStorage();
 
             DashboardSqlDataSource sql = new DashboardSqlDataSource("sql");
             sql.Queries.Add(SelectQueryFluentBuilder.AddTable("Products").SelectAllColumns().Build("query"));
             dataSourceStrorage.RegisterDataSource(sql.SaveToXml());
 
-            DashboardConfigurator.Default.SetDashboardStorage(dashboardStorage);
+            DashboardConfigurator.Default.SetDashboardStorage(new DashboardFileStorage(Server.MapPath("~/App_Data/Dashboards")));
             DashboardConfigurator.Default.SetDataSourceStorage(dataSourceStrorage);
             DashboardConfigurator.Default.ConfigureDataConnection += ASPxDashboard1_ConfigureDataConnection;
         }

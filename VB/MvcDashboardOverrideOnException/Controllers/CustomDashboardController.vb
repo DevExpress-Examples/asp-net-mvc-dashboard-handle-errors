@@ -27,10 +27,4 @@ Namespace MvcDashboardOverrideOnException
 			Return $"{{ ""Message"":""{message}"" }}"
 		End Function
 	End Class
-
-	Public Class CustomException
-		Inherits Exception
-		Public Const SafeMessage As String = "Safe Message!"
-		Public Const UnsafeMessage As String = "Unsafe Message!"
-	End Class
 End Namespace

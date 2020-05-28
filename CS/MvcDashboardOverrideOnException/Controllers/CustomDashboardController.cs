@@ -26,9 +26,4 @@ namespace MvcDashboardOverrideOnException {
             return $"{{ \"Message\":\"{message}\" }}";
         }
     }
-
-    public class CustomException : Exception {
-        public const string SafeMessage = "Safe Message!";
-        public const string UnsafeMessage = "Unsafe Message!";
-    }
 }
