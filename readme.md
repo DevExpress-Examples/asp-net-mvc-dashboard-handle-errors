@@ -1,14 +1,11 @@
-
-
 # ASP.NET MVC Dashboard - How to handle errors
-<!-- run online -->
-**[[Run Online]](https://codecentral.devexpress.com/267336836/)**
-<!-- run online end -->
 
 The following example demostrates two approaches on how to handle errors in the MVC Dsahboard applicaiton:
 
 - How to specify custom text for internal Dashboard errors
 - How to throw a custom exception during a server-side processing and display the error in the Dashboard error toast
+
+> Both projects in this example override the [OnException](https://docs.microsoft.com/en-us/dotnet/api/system.web.mvc.controller.onexception) method. You can also handle the [ASPxWebControl.CallbackError](https://docs.devexpress.com/AspNet/DevExpress.Web.ASPxWebControl.CallbackError) event to customize error text. See the following example for details about this approach: [ASP.NET Web Forms Dashboard - How to handle errors](https://github.com/DevExpress-Examples/asp-net-web-forms-dashboard-change-default-error-text-callback-error)
 
 ## How to specify custom text for internal Dashboard errors
 
@@ -73,7 +70,6 @@ public static void RegisterService(RouteCollection routes) {
 	routes.MapDashboardRoute("dashboardDesigner", "CustomDashboard", new string[] { "MvcDashboardOverrideOnException" });
 }
 ```
-
 
 ## How to throw a custom exception during a server-side processing and display the error in the Dashboard error toast
 
