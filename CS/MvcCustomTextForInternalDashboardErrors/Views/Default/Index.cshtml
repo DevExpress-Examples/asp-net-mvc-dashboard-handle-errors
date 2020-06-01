@@ -1,0 +1,24 @@
+﻿@using System.Web.UI.WebControls
+
+<head>
+    @Html.DevExpress().GetStyleSheets(
+            new StyleSheet { ExtensionSuite = ExtensionSuite.NavigationAndLayout },
+            new StyleSheet { ExtensionSuite = ExtensionSuite.Editors },
+            new StyleSheet { ExtensionSuite = ExtensionSuite.Dashboard }
+        )
+    @Html.DevExpress().GetScripts(
+        new Script { ExtensionSuite = ExtensionSuite.NavigationAndLayout },
+        new Script { ExtensionSuite = ExtensionSuite.Editors },
+        new Script { ExtensionSuite = ExtensionSuite.Dashboard }
+    )
+
+</head>
+<body><div style="position:absolute; top: 0; right:0; left:0; bottom: 0">
+        @Html.DevExpress().Dashboard(settings => {
+            settings.Name = "Dashboard";
+            settings.ControllerName = "CustomDashboard";
+            settings.Width = Unit.Percentage(100);
+            settings.Height = Unit.Percentage(100);
+        }).GetHtml()
+    </div>
+</body>
