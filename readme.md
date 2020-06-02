@@ -1,6 +1,6 @@
 # ASP.NET MVC Dashboard - How to handle errors
 
-The following example demostrates two approaches on how to handle errors in the MVC Dsahboard applicaiton:
+The following example demostrates two approaches on how to handle errors in the MVC Dashboard applicaiton:
 
 - How to specify custom text for internal Dashboard errors
 - How to throw a custom exception during a server-side processing and display the error in the Dashboard error toast
