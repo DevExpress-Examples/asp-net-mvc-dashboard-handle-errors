@@ -15,12 +15,14 @@ The following example demostrates two approaches on how to handle errors in the 
 ## How to specify custom text for internal Dashboard errors
 
 <!-- default file list -->
-*Files to look at*:
+### Files to Look At
 * [Global.asax.cs](./CS/MvcCustomTextForInternalDashboardErrors/Global.asax.cs) (VB: [Global.asax.vb](./VB/MvcCustomTextForInternalDashboardErrors/Global.asax.vb))
 * [CustomDashboardController.cs](./CS/MvcCustomTextForInternalDashboardErrors/Controllers/CustomDashboardController.cs) (VB: [CustomDashboardController.vb](./VB/MvcCustomTextForInternalDashboardErrors/Controllers/CustomDashboardController.vb))
 * [DashboardConfig.cs](./CS/MvcCustomTextForInternalDashboardErrors/App_Start/DashboardConfig.cs) (VB: [DashboardConfig.vb](./VB/MvcCustomTextForInternalDashboardErrors/App_Start/DashboardConfig.vb))
 * [Index.cshtml](./CS/MvcCustomTextForInternalDashboardErrors/Views/Default/Index.cshtml) VB: [Index.vbhtml](./VB/MvcCustomTextForInternalDashboardErrors/Views/Default/Index.vbhtml))
 <!-- default file list end -->
+
+### Description
 
 The dashboard in this project contains invalid data connection. This example shows how to override the [OnException](https://docs.microsoft.com/en-us/dotnet/api/system.web.mvc.controller.onexception) method in a custom dashboard controller to specify custom text in the exception. The exception occurs when the controller tries to load data.
 
@@ -79,12 +81,14 @@ public static void RegisterService(RouteCollection routes) {
 ## How to throw a custom exception during a server-side processing and display the error in the Dashboard error toast
 
 <!-- default file list -->
-*Files to look at*:
+### Files to Look At
 * [Global.asax.cs](./CS/MvcThrowCustomExceptionDashboardErrorToast/Global.asax.cs) (VB: [Global.asax.vb](./VB/MvcThrowCustomExceptionDashboardErrorToast/Global.asax.vb))
 * [DashboardConfig.cs](./CS/MvcThrowCustomExceptionDashboardErrorToast/App_Start/DashboardConfig.cs) (VB: [DashboardConfig.vb](./VB/MvcThrowCustomExceptionDashboardErrorToast/App_Start/DashboardConfig.vb))
 * [CustomDashboardController.cs](./CS/MvcThrowCustomExceptionDashboardErrorToast/Controllers/CustomDashboardController.cs) (VB: [CustomDashboardController.vb](./VB/MvcThrowCustomExceptionDashboardErrorToast/Controllers/CustomDashboardController.vb))
 * [Index.cshtml](./CS/MvcThrowCustomExceptionDashboardErrorToast/Views/Default/Index.cshtml) (VB: [Index.vbhtml](./VB/MvcThrowCustomExceptionDashboardErrorToast/Views/Default/Index.vbhtml))
 <!-- default file list end -->
+
+### Description
 
 This example shows how to throw a custom exception when a controller loads a dashboard and display this exception in the dashboard error toast. The example overrides the [OnException](https://docs.microsoft.com/en-us/dotnet/api/system.web.mvc.controller.onexception) method.
 
