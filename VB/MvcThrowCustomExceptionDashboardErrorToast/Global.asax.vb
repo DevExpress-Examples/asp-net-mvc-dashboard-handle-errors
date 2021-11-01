@@ -1,4 +1,3 @@
-Imports Microsoft.VisualBasic
 Imports System
 Imports System.Collections.Generic
 Imports System.Web.Mvc
@@ -13,6 +12,7 @@ Namespace MvcThrowCustomExceptionDashboardErrorToast
 			DashboardConfig.RegisterService(RouteTable.Routes)
 			AreaRegistration.RegisterAllAreas()
 			RouteConfig.RegisterRoutes(RouteTable.Routes)
+			ControllerBuilder.Current.SetControllerFactory(GetType(RestrictedControllerFactory))
 
 			DashboardConfigurator.Default.SetDashboardStorage(New CustomDashboardStorage())
 		End Sub

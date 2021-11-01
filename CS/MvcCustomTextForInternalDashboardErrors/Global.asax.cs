@@ -14,6 +14,7 @@ namespace MvcCustomTextForInternalDashboardErrors {
             DashboardConfig.RegisterService(RouteTable.Routes);
             AreaRegistration.RegisterAllAreas();
             RouteConfig.RegisterRoutes(RouteTable.Routes);
+            ControllerBuilder.Current.SetControllerFactory(typeof(RestrictedControllerFactory));
 
             DataSourceInMemoryStorage dataSourceStrorage = new DataSourceInMemoryStorage();
 

@@ -6,14 +6,12 @@ using System.Xml.Linq;
 using DevExpress.DashboardWeb;
 
 namespace MvcThrowCustomExceptionDashboardErrorToast {
-    public class MvcApplication : System.Web.HttpApplication
-    {
-        protected void Application_Start()
-        {
+    public class MvcApplication : System.Web.HttpApplication {
+        protected void Application_Start() {
+            ControllerBuilder.Current.SetControllerFactory(typeof(RestrictedControllerFactory));
             DashboardConfig.RegisterService(RouteTable.Routes);
             AreaRegistration.RegisterAllAreas();
             RouteConfig.RegisterRoutes(RouteTable.Routes);
-
             DashboardConfigurator.Default.SetDashboardStorage(new CustomDashboardStorage());
         }
     }

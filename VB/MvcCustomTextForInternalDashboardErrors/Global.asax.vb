@@ -14,6 +14,7 @@ Namespace MvcCustomTextForInternalDashboardErrors
 			DashboardConfig.RegisterService(RouteTable.Routes)
 			AreaRegistration.RegisterAllAreas()
 			RouteConfig.RegisterRoutes(RouteTable.Routes)
+			ControllerBuilder.Current.SetControllerFactory(GetType(RestrictedControllerFactory))
 
 			Dim dataSourceStrorage As New DataSourceInMemoryStorage()
 
