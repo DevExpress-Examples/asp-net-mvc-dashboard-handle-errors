@@ -1,5 +1,8 @@
 ﻿@using System.Web.UI.WebControls
 
+<!DOCTYPE html>
+
+<html>
 <head>
     @Html.DevExpress().GetStyleSheets(
             new StyleSheet { ExtensionSuite = ExtensionSuite.NavigationAndLayout },
@@ -12,14 +15,21 @@
         new Script { ExtensionSuite = ExtensionSuite.Dashboard }
     )
 
+    <style type="text/css">
+        html, body, form {  
+            height: 100%;  
+            margin: 0;  
+            padding: 0;  
+            overflow: hidden;  
+        }
+    </style>
 </head>
 <body>
-    <div style="position:absolute; top: 0; right:0; left:0; bottom: 0">
-        @Html.DevExpress().Dashboard(settings => {
-            settings.ControllerName = "CustomDashboard";
-            settings.Name = "Dashboard";
-            settings.Width = Unit.Percentage(100);
-            settings.Height = Unit.Percentage(100);
-        }).GetHtml()
-    </div>
+    @Html.DevExpress().Dashboard(settings => {
+        settings.ControllerName = "CustomDashboard";
+        settings.Name = "Dashboard";
+        settings.Width = Unit.Percentage(100);
+        settings.Height = Unit.Percentage(100);
+    }).GetHtml()
 </body>
+</html>

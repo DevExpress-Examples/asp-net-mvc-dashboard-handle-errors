@@ -18,7 +18,7 @@ namespace MvcCustomTextForInternalDashboardErrors {
 
             DataSourceInMemoryStorage dataSourceStrorage = new DataSourceInMemoryStorage();
 
-            DashboardSqlDataSource sql = new DashboardSqlDataSource("sql");
+            DashboardSqlDataSource sql = new DashboardSqlDataSource("sql", "sqlConn");
             sql.Queries.Add(SelectQueryFluentBuilder.AddTable("Products").SelectAllColumns().Build("query"));
             dataSourceStrorage.RegisterDataSource(sql.SaveToXml());
 
@@ -29,8 +29,8 @@ namespace MvcCustomTextForInternalDashboardErrors {
 
         void ASPxDashboard1_ConfigureDataConnection(object sender, ConfigureDataConnectionWebEventArgs e) {
             // Invalid connection parameters:
-            switch (e.DataSourceName) {
-                case "sql":
+            switch (e.ConnectionName) {
+                case "sqlConn":
                     e.ConnectionParameters = new MsSqlConnectionParameters(@"localhost", "Northwind123", null, null, MsSqlAuthorizationType.Windows);
                     break;
             }

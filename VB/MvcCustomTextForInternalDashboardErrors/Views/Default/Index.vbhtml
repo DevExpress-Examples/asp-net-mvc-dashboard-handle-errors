@@ -1,4 +1,8 @@
 ﻿@Imports System.Web.UI.WebControls
+
+<!DOCTYPE html>
+
+<html>
 <head>
     @Html.DevExpress().GetStyleSheets(
         New StyleSheet With {.ExtensionSuite = ExtensionSuite.NavigationAndLayout},
@@ -10,16 +14,22 @@
         New Script With {.ExtensionSuite = ExtensionSuite.Editors},
         New Script With {.ExtensionSuite = ExtensionSuite.Dashboard}
     )
-
+    <style type="text/css">
+        html, body, form {  
+            height: 100%;  
+            margin: 0;  
+            padding: 0;  
+            overflow: hidden;  
+        }
+    </style>
 </head>
 <body>
-    <div style="position:absolute; top: 0; right:0; left:0; bottom: 0">
-        @Html.DevExpress().Dashboard(
-        Sub(settings)
-            settings.ControllerName = "CustomDashboard"
-            settings.Name = "Dashboard"
-            settings.Width = Unit.Percentage(100)
-            settings.Height = Unit.Percentage(100)
-        End Sub).GetHtml()
-    </div>
+    @Html.DevExpress().Dashboard(
+    Sub(settings)
+        settings.ControllerName = "CustomDashboard"
+        settings.Name = "Dashboard"
+        settings.Width = Unit.Percentage(100)
+        settings.Height = Unit.Percentage(100)
+    End Sub).GetHtml()
 </body>
+</html>
